@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "domain": "treestep",
+  "lado_A": [
+    {
+      "is_leaf": false,
+      "predicate": "KING_SAFETY_SHIELD",
+      "predicate_id": 2,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "HAS_BISHOP_PAIR",
+        "predicate_id": 0,
+        "yes": { "is_leaf": true, "weight": 70 },
+        "no": { "is_leaf": true, "weight": 35 }
+      },
+      "no": { "is_leaf": true, "weight": -55 }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "CONTROLS_CENTER_4",
+      "predicate_id": 1,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "EXTENDED_CENTER_CONTROL",
+        "predicate_id": 12,
+        "yes": { "is_leaf": true, "weight": 65 },
+        "no": { "is_leaf": true, "weight": 25 }
+      },
+      "no": { "is_leaf": true, "weight": -30 }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "MINOR_PIECES_DEVELOPED",
+      "predicate_id": 6,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "ROOK_ON_OPEN_FILE",
+        "predicate_id": 3,
+        "yes": { "is_leaf": true, "weight": 60 },
+        "no": { "is_leaf": true, "weight": 25 }
+      },
+      "no": { "is_leaf": true, "weight": -40 }
+    }
+  ],
+  "lado_B": [
+    {
+      "is_leaf": false,
+      "predicate": "KING_CENTRALIZED",
+      "predicate_id": 7,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "KING_NEAR_ENEMY_KING",
+        "predicate_id": 14,
+        "yes": { "is_leaf": true, "weight": 85 },
+        "no": { "is_leaf": true, "weight": 40 }
+      },
+      "no": { "is_leaf": true, "weight": -50 }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "HAS_PASSED_PAWN",
+      "predicate_id": 4,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "CONNECTED_PAWN_PHALANX",
+        "predicate_id": 11,
+        "yes": { "is_leaf": true, "weight": 95 },
+        "no": { "is_leaf": true, "weight": 55 }
+      },
+      "no": { "is_leaf": true, "weight": -20 }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "SEVENTH_RANK_INVASION",
+      "predicate_id": 9,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "NO_ISOLATED_PAWNS",
+        "predicate_id": 13,
+        "yes": { "is_leaf": true, "weight": 75 },
+        "no": { "is_leaf": true, "weight": 30 }
+      },
+      "no": { "is_leaf": true, "weight": -25 }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "domain": "treestep",
+  "lado_A": [
+    {
+      "is_leaf": false,
+      "predicate": "BYTE_DEV_MINORS_2PLUS",
+      "predicate_id": 7,
+      "yes": {
+        "is_leaf": true,
+        "weight": -20,
+        "scale_reg": 0,
+        "scale_name": "DEV_MINORS",
+        "scale_weight": 8
+      },
+      "no": {
+        "is_leaf": true,
+        "weight": -32,
+        "scale_reg": 0,
+        "scale_name": "DEV_MINORS",
+        "scale_weight": 8
+      }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "BYTE_CASTLE_READY_OR_DONE",
+      "predicate_id": 11,
+      "yes": {
+        "is_leaf": true,
+        "weight": 11,
+        "scale_reg": 5,
+        "scale_name": "PHALANX_FILES",
+        "scale_weight": 11
+      },
+      "no": {
+        "is_leaf": true,
+        "weight": -7,
+        "scale_reg": 3,
+        "scale_name": "CENTER_OCC",
+        "scale_weight": 6
+      }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "BYTE_BISHOP_MOB_7PLUS",
+      "predicate_id": 9,
+      "yes": {
+        "is_leaf": false,
+        "predicate": "BYTE_DEV_MINORS_2PLUS",
+        "predicate_id": 7,
+        "yes": {
+          "is_leaf": true,
+          "weight": 10,
+          "scale_reg": 5,
+          "scale_name": "PHALANX_FILES",
+          "scale_weight": 5
+        },
+        "no": {
+          "is_leaf": true,
+          "weight": 10,
+          "scale_reg": 5,
+          "scale_name": "PHALANX_FILES",
+          "scale_weight": 5
+        }
+      },
+      "no": {
+        "is_leaf": true,
+        "weight": -15,
+        "scale_reg": 0,
+        "scale_name": "DEV_MINORS",
+        "scale_weight": 4
+      }
+    }
+  ],
+  "lado_B": [
+    {
+      "is_leaf": false,
+      "predicate": "BYTE_DEV_MINORS_2PLUS",
+      "predicate_id": 7,
+      "yes": {
+        "is_leaf": true,
+        "weight": -6,
+        "scale_reg": 3,
+        "scale_name": "CENTER_OCC",
+        "scale_weight": 8
+      },
+      "no": {
+        "is_leaf": true,
+        "weight": -6,
+        "scale_reg": 3,
+        "scale_name": "CENTER_OCC",
+        "scale_weight": 8
+      }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "BYTE_PASSED_FILE_EXISTS",
+      "predicate_id": 2,
+      "yes": {
+        "is_leaf": true,
+        "weight": -2,
+        "scale_reg": 5,
+        "scale_name": "PHALANX_FILES",
+        "scale_weight": 11
+      },
+      "no": {
+        "is_leaf": true,
+        "weight": -10,
+        "scale_reg": 5,
+        "scale_name": "PHALANX_FILES",
+        "scale_weight": 8
+      }
+    },
+    {
+      "is_leaf": false,
+      "predicate": "BYTE_PHALANX_IN_CENTER",
+      "predicate_id": 3,
+      "yes": {
+        "is_leaf": true,
+        "weight": 34,
+        "scale_reg": 0,
+        "scale_name": "DEV_MINORS",
+        "scale_weight": 18
+      },
+      "no": {
+        "is_leaf": true,
+        "weight": 38,
+        "scale_reg": 9,
+        "scale_name": "SEVENTH_RANK",
+        "scale_weight": 24
+      }
+    }
+  ]
+}
